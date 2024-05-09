@@ -12,6 +12,12 @@ function containsDuplicate(nums: number[]): boolean {
   return false;
 }
 
+// simpler solution -  https://leetcode.com/problems/contains-duplicate/solutions/1818765/short-only-2-lines-sweet-typescript-solution-top-1-speed/
+// function containsDuplicateA(nums: number[]): boolean {
+//   const set = new Set<number>(nums);
+//   return set.size > nums.length;
+// }
+
 // tests
 assert.equal(containsDuplicate([1, 2, 3, 1]), true);
 assert.equal(containsDuplicate([1, 2, 3, 4]), false);
