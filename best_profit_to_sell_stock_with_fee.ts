@@ -1,18 +1,18 @@
 //prices = [1,3,2,8,4,9], fee = 2
 
 function maxProfit(prices: number[], fee: number): number {
-	let h = -prices[0];
-	let nh = 0;
+  let h = -prices[0];
+  let nh = 0;
 
-	for (let i = 1; i < prices.length; i++) {
-		h = Math.max(h, nh - prices[i]);
-		nh = Math.max(nh, h + prices[i] - fee);
-	}
+  for (let i = 1; i < prices.length; i++) {
+    h = Math.max(h, nh - prices[i]);
+    nh = Math.max(nh, h + prices[i] - fee);
+  }
 
-	// time complexity: o(n)
-	// space complexity: o(1)
+  // time complexity: o(n)
+  // space complexity: o(1)
 
-	return nh;
+  return nh;
 }
 
 maxProfit([1, 3, 4, 8, 4, 9], 2);
