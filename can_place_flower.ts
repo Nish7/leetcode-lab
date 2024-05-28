@@ -1,27 +1,27 @@
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
-	let flowersLeft = n;
-	let adjacentLeft = false;
+  let flowersLeft = n;
+  let adjacentLeft = false;
 
-	for (let i = 0; i < flowerbed.length; i++) {
-		if (flowersLeft == 0) break;
+  for (let i = 0; i < flowerbed.length; i++) {
+    if (flowersLeft == 0) break;
 
-		if (flowerbed[i] == 1) {
-			adjacentLeft = true;
-			continue;
-		}
+    if (flowerbed[i] == 1) {
+      adjacentLeft = true;
+      continue;
+    }
 
-		const adjacentRight =
-			flowerbed.length == i - 1 ? false : flowerbed[i + 1] === 1 ? true : false;
+    const adjacentRight =
+      flowerbed.length == i - 1 ? false : flowerbed[i + 1] === 1 ? true : false;
 
-		if (!adjacentLeft && !adjacentRight) {
-			flowersLeft -= 1;
-			adjacentLeft = true;
-		} else {
-			adjacentLeft = false;
-		}
-	}
+    if (!adjacentLeft && !adjacentRight) {
+      flowersLeft -= 1;
+      adjacentLeft = true;
+    } else {
+      adjacentLeft = false;
+    }
+  }
 
-	return flowersLeft == 0;
+  return flowersLeft == 0;
 }
 
 // time complexity: O(n)
