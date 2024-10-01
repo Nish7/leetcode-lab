@@ -13,12 +13,12 @@
 // approach: keep looping until # is found, then loop until
 
 function encode(strs: string[]): string {
-  let res = "";
+  let res = ''
   for (let ele of strs) {
-    res += ele.length + "#" + ele;
+    res += ele.length + '#' + ele
   }
 
-  return res;
+  return res
 }
 
 // this is not the solution
@@ -26,25 +26,25 @@ function encode(strs: string[]): string {
 // 2#ab1#a
 // 13#abcde....x
 function decode(str: string): string[] {
-  let x = 0;
-  let j = x;
-  const res: string[] = [];
+  let x = 0
+  let j = x
+  const res: string[] = []
 
   while (x < str.length) {
-    while (str[j] != "#") {
-      j++;
+    while (str[j] != '#') {
+      j++
     }
 
-    const len: number = parseInt(str.substring(x, j));
-    res.push(str.substring(j + 1, j + len + 1));
+    const len: number = parseInt(str.substring(x, j))
+    res.push(str.substring(j + 1, j + len + 1))
 
-    x = j + len + 1;
-    j = x;
+    x = j + len + 1
+    j = x
   }
 
-  return res;
+  return res
 }
 
-const en = encode([]);
-console.log(en);
-console.log(decode(en));
+const en = encode([])
+console.log(en)
+console.log(decode(en))
