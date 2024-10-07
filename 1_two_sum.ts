@@ -1,6 +1,6 @@
 type RemainderHash = {
-	[key: number]: number;
-};
+  [key: number]: number
+}
 
 // function twoSums(nums: number[], target: number): number[] {
 // 	// naive solution
@@ -32,18 +32,18 @@ type RemainderHash = {
 // Example: [2,3,4,3,2]  , target = 6
 
 function twoSums(nums: number[], target: number): number[] {
-	const map: Record<number, number> = {};
+  const map: Record<number, number> = {}
 
-	for (let i = 0; i < nums.length; i++) {
-		const remainderNeeded = target - nums[i];
+  for (let i = 0; i < nums.length; i++) {
+    const remainderNeeded = target - nums[i]
 
-		if (remainderNeeded in map) {
-			// can also use hasOwnProperty() which is lil bit faster
-			return [map[remainderNeeded], i];
-		}
+    if (remainderNeeded in map) {
+      // can also use hasOwnProperty() which is lil bit faster
+      return [map[remainderNeeded], i]
+    }
 
-		map[nums[i]] = i;
-	}
+    map[nums[i]] = i
+  }
 
-	throw Error('not found');
+  throw Error('not found')
 }

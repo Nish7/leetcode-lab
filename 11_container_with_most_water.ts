@@ -6,33 +6,31 @@
 
 // This is the fixed one:
 function maxArea(height: number[]): number {
-  let maxArea = 0;
+  let maxArea = 0
 
-  let left = 0;
-  let right = height.length - 1;
+  let left = 0
+  let right = height.length - 1
 
   while (left < right) {
-    const leftv = height[left];
-    const rightv = height[right];
-    console.log(leftv, rightv);
+    const leftv = height[left]
+    const rightv = height[right]
 
     // calculate the area
-    const w = right - left;
-    const h = Math.min(rightv, leftv);
-    const area = w * h;
-    console.log(w, h, area);
+    const w = right - left
+    const h = Math.min(rightv, leftv)
+    const area = w * h
     // determine and store the max area
-    maxArea = Math.max(area, maxArea);
+    maxArea = Math.max(area, maxArea)
 
     // now what happens? next steps, move on to the next pointer
     if (leftv >= rightv) {
-      right--;
+      right--
     } else if (rightv > leftv) {
-      left++;
+      left++
     }
   }
 
-  return maxArea;
+  return maxArea
 }
 
-console.log(maxArea([1,8,6,2,5,4,8,3,7]));
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))
