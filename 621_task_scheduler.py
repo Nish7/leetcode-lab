@@ -2,7 +2,6 @@ from collections import deque
 import heapq
 from typing import Counter, List
 
-
 # approach: keep a track of max heap and queue. the max heap is used to get the max eligible letter from the  and queue is to keep state of the upcoming any upcoming letter that may be pushed in the maxHeap to be eligible
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
