@@ -32,7 +32,7 @@ class Solution:
 
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j] != 0:
+                if grid[i][j] != 0 and (i, j) not in visisted_nodes:
                     max_area = max(dfs(i, j), max_area)
 
         return max_area  # O(m * n)

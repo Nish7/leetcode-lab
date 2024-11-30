@@ -49,3 +49,8 @@ class Solution:
             q.popleft()
 
         return m[node]
+
+
+# Cleaner Approach from Chat
+# Go through the dfs approach, create the node there and dfs into it neighbor and make it return
+# node_map[node] if already exist
