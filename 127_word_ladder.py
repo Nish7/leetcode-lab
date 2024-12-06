@@ -4,6 +4,9 @@ from collections import deque
 
 class Solution:
     def oneChDiff(self, word_a, word_b):
+        # Possible improvement: you can use a pattern dict to generate each char.
+        # so it would be nm^2 n^2m. it minor improvement
+        # str[:i] + '*' + str[i+1:] -> this basically omites each char by index
         one = False
         for i in range(len(word_a)):
             if word_a[i] != word_b[i]:
