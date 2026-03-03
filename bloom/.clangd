@@ -1,0 +1,9 @@
+CompileFlags:
+  Add:
+    [
+      "-std=c++23",
+      "-Wall",
+      "-L/opt/homebrew/lib",
+      "-I/opt/homebrew/include",
+      -lz3",
+    ]
